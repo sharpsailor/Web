@@ -138,7 +138,7 @@ section.pros-section {
 section.pros-section h1 {
   margin-bottom: 20px;
 }
-section.pros-section p {
+section.pros-section p.section-title {
   margin-bottom: 60px;
   color: var(--grayish-blue);
 }
@@ -165,6 +165,9 @@ section.articles-section {
 }
 section.articles-section h1 {
   margin-bottom: 30px;
+}
+.article-wrapper .article-card {
+  background: var(--white);
 }
 .article-wrapper {
   display: flex;
@@ -238,6 +241,42 @@ footer .copyright {
 .hamburger-btn {
   display: none;
 }
+@media (max-width: 1198px) {
+  .card-wrapper,
+  .article-wrapper {
+    flex-wrap: wrap;
+  }
+  .card-wrapper .card {
+    flex: 1 0 40%;
+    margin-bottom: 30px;
+  }
+  .card-wrapper .card:nth-child(odd) {
+    margin-left: 0px;
+  }
+  .article-wrapper .article-card {
+    flex: 1 0 40%;
+    margin-bottom: 30px;
+  }
+  .article-wrapper .article-card:nth-child(odd) {
+    margin-left: 0px;
+  }
+}
+@media (max-width: 998px) {
+  footer .content {
+    flex-wrap: wrap;
+  }
+  footer .content > * {
+    flex: 1 0 30%;
+    margin-bottom: 30px;
+    text-align: left;
+  }
+  footer ul.socials {
+    margin-top: 30px;
+  }
+  footer .footer-cta{
+    margin-bottom: 0;
+  }
+}
 @media (max-width: 870px) {
   .hamburger-btn {
     display: block;
@@ -282,20 +321,52 @@ footer .copyright {
   .header-images {
     flex: 1 0 30%;
   }
-  .header-wrap{
+  .header-wrap {
     padding-top: 30px;
   }
-  .header-images img:first-child{
+  .header-images img:first-child {
     right: -50px;
   }
-  .header-images img:last-child{
-    top:-135px;    
+  .header-images img:last-child {
+    top: -135px;
     right: -72px;
   }
-  .header-text h1{
+  .header-text h1 {
     font: size 30px;
   }
-  .header-text p{
+  .header-text p {
     font-size: 16px;
+  }
+  section.pros-section,
+  section .article-section {
+    padding: 30px 0;
+  }
+  section.pros-section h1 .section-text {
+    font-size: 24px;
+  }
+  section.pros-section p .section-text {
+    font-size: 16px;
+  }
+}
+@media(max-width:768px){
+  footer .content > * {
+    flex: 1 0 100%;
+    text-align: center;;
+  }
+  footer .socials{
+    justify-content: center;
+  }
+}
+@media (max-width: 580px) {
+  .card-wrapper .card {
+    flex: 1 0 100%;
+    margin-left: 0 !important;
+  }
+  .article-wrapper .article-card {
+    flex: 1 0 100%;
+    margin-left: 0px;
+  }
+  .article-wrapper .article-card:last-child {
+    margin-bottom: 0px;
   }
 }
