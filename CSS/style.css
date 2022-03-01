@@ -288,4 +288,14 @@ footer .copyright {
   .header-images img:first-child{
     right: -50px;
   }
+  .header-images img:last-child{
+    top:-135px;    
+    right: -72px;
+  }
+  .header-text h1{
+    font: size 30px;
+  }
+  .header-text p{
+    font-size: 16px;
+  }
 }
